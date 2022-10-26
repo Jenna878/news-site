@@ -1,0 +1,13 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Про нас{% endblock %}
+     
+{% block content %}
+    <div class="features">
+        <h1>Про нас</h1>
+        <p>Нам интересна geek-культура, в том числе: игры, наука, кино, комиксы, искусство и повседневная жизнь. Мы пишем об этом ежедневно.</p>
+           <a href="{% url 'about_detail' %}" class="btn btn-danger">Просто нажми</a>
+    </div> 
+{% endblock %}
+
+

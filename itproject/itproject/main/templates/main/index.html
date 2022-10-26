@@ -1,0 +1,23 @@
+{% extends 'main/layout.html' %}
+
+{% block title %}Главная страница{% endblock %}
+     
+{% block content %}
+    <div class="features">
+        <h1>{{ title }}</h1>
+        
+        <p>Харли Квинн (иногда Харли Куинн, англ. Harley Quinn, официально — доктор Харлин Фрэнсис Квинзель, англ. Dr. Harleen Frances Quinzel) — суперзлодейка, позже антигерой вселенной DC Comics, первоначально появившаяся в мультсериале «Бэтмен» 1992 года, позже была перенесена в комиксы. Псевдоним персонажа образован из её настоящего имени, Харлин Квинзель (Harleen Quinzel), как ассоциация со словом «арлекин» (harlequin).</p>
+        <a href="{% url 'about' %}" class="btn btn-warning">На старницу про нас</a>
+     
+
+        {% for el in values %}
+            {% if el == 'Harly Quinn' %}
+               <p>{{ el|upper }}</p>
+            {% endif %}
+        {% endfor %}
+
+        {% for el in obj %}
+            <p>{{ el }}</p>
+        {% endfor %}
+    </div>
+{% endblock %}
